@@ -1,18 +1,1 @@
-h1 {
-  font-family:Arial, Helvetica;
-  text-align:center;
-  color:antiquewhite;
-  font-variant: small-caps;
-  letter-spacing: 3px;
-  text-shadow: 2px 2px 5px black;
-}
-body {
-  background-color:#2e4052;
-}
-img:hover {
-  border: antiquewhite dotted 3px;
-  height:250px;
-  border-width: thick
-}
-h6 {
-  color:antiquewhite;}
+
