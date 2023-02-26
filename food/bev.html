@@ -1,0 +1,139 @@
+<html>
+<head>
+  <title>lorem sipsum</title>
+</head>
+<body>
+    <nav> 
+      <li><a href="bev.html"> HOME </a> </li>
+      <li><a href="../index.html"> BACK </a> </li>
+    </nav>
+  <br>
+  <div>
+  <img src="https://i.imgur.com/aXuNCQO.png" id="logo">
+  </div>
+  <br>
+  <a href="https://en.wikipedia.org/wiki/Newsletter">
+  <div id=sidebar>
+    <p id="news"> NEWSLETTER </p>
+  </div>
+  </a>
+  <center>
+    <div class=container>
+      <div id="header"> <h1> MENU </h1>
+        </div>
+      <div class=wrapper>
+    <div class="a"> <h2> DIET MILK </h2> 
+      <p id=menu> All the flavor, with none of the calories! </p> 
+        </div>
+    <div class="b"> <img src="https://i.imgur.com/o0v9J7A.png" id="pic"> </div>
+        <br>
+      <div class="c"> <h2>WITCHES' BREW </h2> <p id=menu> This'll have you cackling and scheming in no time! </p> </div>
+    <div class="d"> <img src="https://i.imgur.com/4lemHja.png" id="pic"> </div>
+        <br>
+        <div class="e"> <h2> MEAT SODA </h2> <p id=menu> Please don't buy this one. </p> </div>
+        <div class="f"> <img src="https://i.imgur.com/TbfWCRa.png" id="pic"> </div>
+        
+        </div>
+      <br>
+      <br>
+      <br>
+  </center>
+</body>
+</html>
+  
+  <style>
+    nav{
+  font-family:Lucida Console;
+  list-style-type:none;
+  position:fixed;
+  width:100%;
+  background-color:#2E2836;
+  left:0;
+  top:0;
+  padding:7px;
+  border-radius: 0px 0px 30px 30px;
+  }
+
+li{display:inline;
+}
+
+a{text-decoration:none;
+color:#e4dfda;
+padding:15px;
+font-size:18pt;
+}
+
+body{background-image:linear-gradient(#F6EFFF, #F3F3F3);
+  background-repeat: no-repeat;
+  background-attachment: fixed;}
+
+#placeholder{float:left;
+position:fixed;
+top:50px;
+left:30px;}
+
+#logo{width:10%;
+position:fixed;
+padding:20px;
+left:30px;}
+
+.container{background-color:white;
+width:60%;
+padding:30px;
+border:solid grey 5px;
+border-radius:70px / 50px;
+box-shadow: -7px 7px 10px;}
+
+#water{width:10%;
+float:left;
+padding:7px;
+border:solid black 2px;}
+
+#h2o{width:10%;
+float:right;
+border:solid black 2px;
+padding:7px;}
+
+
+h1{font-family:arial black} 
+
+#sidebar{position:fixed;
+right:0px;
+width: 300px;
+  height: 50px;
+  border: 3px solid grey;
+  padding: 10px;
+  background-color:white;
+border-radius: 60px / 50px;
+box-shadow: -3px 3px 5px;}
+
+#news{font-family:Arial Black;
+  color:black;
+margin:auto;
+  width:85%;
+font-size:25pt;}
+
+#sidebar:hover{background-color:yellow;
+border:solid black 3px}
+
+.wrapper{margin:auto;
+display:grid;
+height:90vh;
+width:50vw;
+grid-template: 
+  "A B C" auto
+  "D E F"
+  "G H I";
+grid-row-gap:3px;
+grid-column-gap:3px;}
+
+h2{font-family:Impact;
+font-size:40pt;}
+
+
+#pic{width:30%;}
+
+#menu{font-family:Lucida Console;
+font-size:12pt;}
+    
+  </style>
