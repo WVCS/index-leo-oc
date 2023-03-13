@@ -1,1 +1,110 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UNI-JUMP</title>
+</head>
+<body>
+ <nav> 
+      <li><a href="jump.html"> H O M E </a> </li>
+      <li><a href="what.html"> W H A T ? </a> </li>
+      <li><a href="why.html"> W H Y ? </a> </li>
+      <li><a href="where.html"> W H E R E ? </a> </li>
+      <li><a href="when.html"> W H E N ? </a> </li>
 
+    </nav> 
+  <img src="https://imgur.com/0XYAT6Y.png" id="logo">
+  
+  <div class="wrapper">
+  <a href="what.html">  <div class="a" id="item"> WHAT?</div> </a> 
+   <a href="why.html"> <div class="b" id="item"> WHY?  </div></a>
+   <a href="where.html">  <div class="c" id="item">WHERE? </div></a>
+    <a href="when.html"><div class="d" id="item"> WHEN? </div></a>
+
+  </div>
+</body>
+</html>
+
+<style>
+  nav{
+  font-family:Cooper Black;
+  list-style-type:none;
+  position:fixed;
+  width:100%;
+  background-color:#222222;
+  left:0;
+  top:0;
+  padding:7px;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 0px 3px 50px 3px #F4F7F5;
+  }
+
+li{display:inline;
+  padding:5px;
+}
+
+a{text-decoration:none;
+color:#F4F7F5;
+padding:15px;
+font-size:18pt;
+}
+body{background-color:#222222}
+
+#logo{display:block;
+margin-left:auto;
+margin-right:auto;
+width:50%;
+margin-top:-7%;}
+
+.wrapper{margin:auto;
+display:grid;
+height:auto;
+width:90vw;
+grid-template: 
+  "A B" auto
+  "C D";
+grid-row-gap:3px;
+grid-column-gap:3px;
+}
+
+#item{background-color:#F8F0FB;
+border:dashed 1px #f4f7f5;
+border-radius:10px;
+text-align:center;
+padding:15vh;
+font-family:Broadway;
+font-size:30pt;
+box-shadow: 5px 5px 10px #F4F7F5;}
+
+@media only screen and (max-width: 1024px) {
+  .wrapper{grid-template: 
+  "A" auto
+  "B"
+  "C"
+  "D";}
+}
+
+.a{background-image: url("https://media.istockphoto.com/id/512058550/photo/earth-view-from-space-to-europe.jpg?b=1&s=170667a&w=0&k=20&c=KdoCvyLyZVHcY5_kmIiHYaXdey8C4LhsbBnXBwusZUg=");
+background-position:bottom;
+color:white;
+text-shadow: 3px 2px 3px black;}
+
+.b{background-image: url("https://cdn.mos.cms.futurecdn.net/v5n22xGyNNHLzSnSArbrVH.jpg");
+background-size:cover;
+background-position:center;
+color:white;
+text-shadow: 3px 2px 3px black;}
+
+.c{background-image: url("https://media.istockphoto.com/id/526038787/photo/el-mirage-dry-lake-mojave.jpg?s=612x612&w=0&k=20&c=4NoXDavhNjakwjlfLIuygzkmmq6uvvUhS9HU6Ggdzr8=");
+background-size:cover;
+background-position:center;
+color:white;
+text-shadow: 3px 2px 3px black;}
+
+.d{background-image: url("https://imageio.forbes.com/specials-images/dam/imageserve/1128442176/960x0.jpg?format=jpg&width=960");
+background-size:cover;
+background-position:center;
+color:white;
+text-shadow: 3px 2px 3px black;}
+</style>
