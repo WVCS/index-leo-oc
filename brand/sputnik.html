@@ -1,0 +1,257 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="SputnikSailing.png">
+  <title>Sputnik Sailing</title>
+</head>
+<body>
+  
+        <nav> 
+      <li><a href="index.html"> HOME </a> </li>
+    </nav>
+  <br>
+  <br>
+  <br>
+  
+  <div id="search">
+    <form autocomplete="off" action="">
+      <div class="autocomplete">
+        <input id="myInput" type="text" name="textBox"
+               placeholder="Search">
+      </div>
+     </form>
+  </div>
+  
+  <div>
+  <img src="SputnikSailing.png" id="logo">
+  </div>
+  
+  <center>
+    <div class=container>
+      <div id="header"> <h1> PRODUCTS </h1>
+        <h3> Click on a product image to add it to your cart! </h3>
+        </div>
+      <div class=wrapper>
+    <div class="a"> <h2> THE T SHIRT </h2> 
+      <p id=menu> Self-explanatory! Ironic! May or may not contain Uranium! </p> 
+        </div>
+    <div class="a"> <img src="tshirt.webp" id="pic" onclick="alert('Added to cart!')"> </div>
+        <br>
+      <div class="a"> <h2> MOON SHOES </h2> <p id=menu> *Not actually suitable for space travel. </p> </div>
+    <div class="a"> <img src="moonshoes.jpg" id="pic" onclick="alert('Added to cart!')"> </div>
+        <br>
+        <div class="a"> <h2> COAT HANGER </h2> <p id=menu> Coming up with fake products that are funny is surprisingly hard. </p> </div>
+        <div class="a"> <img src="hanger.avif" id="pic" onclick="alert('Added to cart!')"> </div>
+                <br>
+        <div class="a"> <h2> THE SMILER </h2> <p id=menu> :) </p> </div>
+        <div class="a"> <img src="smiler.jpg" id="pic" onclick="alert('Added to cart!')"> </div>
+        </div>
+      <br>
+      <br>
+      <br>
+  </center>
+  
+  
+  
+  
+ <button onclick="topFunction()" id="topBtn"> TOP </button> 
+  
+</body>
+</html>
+  <style>
+    #myInput {width:70%;background-color:#F7F3E3;cursor:help;}
+.autocomplete{background-color:#F7F3E3;padding:10%;border:solid #262626 3px;
+border-radius:20px / 30px;
+box-shadow: -7px 7px 10px;}
+#search{position:fixed;right:0;b}
+body{background-color:#34312D;}
+#topBtn{position:fixed;
+bottom: 2%;
+left: 2%;
+font-size:20pt;
+font-family:Impact Condensed;
+border:solid black 3px;
+background:linear-gradient(0deg, rgba(83,83,83,1) 0%, rgba(168,168,168,1) 100%);
+border-radius:150%;
+color:white;
+padding:8px;
+display:none;}
+
+#topBtn:hover {position:fixed;
+bottom: 2%;
+left: 2%;
+font-size:20pt;
+border:solid black 3px;
+background: linear-gradient(0deg, rgba(168,168,168,1) 0%, rgba(83,83,83,1) 100%);
+border-radius:150%;
+color:white;}
+nav{
+  font-family:Lucida Console;
+  list-style-type:none;
+  position:absolute;
+  width:100%;
+  background-color:#262626;
+  left:0;
+  top:0;
+  }
+
+li{
+  display:inline;
+  float:left;
+  padding:15px;}
+a {text-decoration:none;
+  color:#C2D888;
+}
+#logo{width:12%;
+position:absolute;
+padding:20px;
+left:8px;}
+
+.container{background: radial-gradient(#ffffff, #F7EFCB);;
+width:60%;
+padding:30px;
+border:solid #262626 5px;
+border-radius:70px / 50px;
+box-shadow: -7px 7px 10px;}
+h1{font-family:arial black} 
+.wrapper{margin:auto;
+display:grid;
+height:90vh;
+width:50vw;
+grid-template: 
+  "A B C" auto
+  "D E F"
+  "G H I";
+grid-row-gap:3px;
+grid-column-gap:3px;
+padding-bottom:250px;}
+
+@media only screen and (max-width: 1024px) {
+  .grid-container{grid-template: 
+  "A" auto
+  "B"
+  "C"
+  "D"
+  "E"
+  "F"
+  "G"
+  "H"
+  "I";}}
+
+h2{font-family:Impact;
+font-size:20pt;}
+
+
+#pic{width:40%;
+cursor: pointer;}
+#pic:hover{box-shadow: 3px 3px 3px black;}
+
+#menu{font-family:Lucida Console;
+font-size:12pt;}
+
+.a{padding:5%;}
+  </style>
+  <script>
+    function autocomplete(inp, arr) {
+
+  var currentFocus;
+
+  inp.addEventListener("input", function(e) {
+      var a, b, i, val = this.value;
+
+      closeAllLists();
+      if (!val) { return false;}
+      currentFocus = -1;
+
+      a = document.createElement("DIV");
+      a.setAttribute("id", this.id + "autocomplete-list");
+      a.setAttribute("class", "autocomplete-items");
+
+      this.parentNode.appendChild(a);
+
+      for (i = 0; i < arr.length; i++) {
+
+        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+
+          b = document.createElement("DIV");
+
+          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+          b.innerHTML += arr[i].substr(val.length);
+
+          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+
+          b.addEventListener("click", function(e) {
+
+              inp.value = this.getElementsByTagName("input")[0].value;
+
+              closeAllLists();
+          });
+          a.appendChild(b);
+        }
+      }
+  });
+
+  inp.addEventListener("keydown", function(e) {
+      var x = document.getElementById(this.id + "autocomplete-list");
+      if (x) x = x.getElementsByTagName("div");
+      if (e.keyCode == 40) {
+        currentFocus++;
+        addActive(x);
+      } else if (e.keyCode == 38) { //up
+        currentFocus--;
+        addActive(x);
+      } else if (e.keyCode == 13) {
+        e.preventDefault();
+        if (currentFocus > -1) {
+          if (x) x[currentFocus].click();
+        }
+      }
+  });
+  function addActive(x) {
+    if (!x) return false;
+    removeActive(x);
+    if (currentFocus >= x.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = (x.length - 1);
+    x[currentFocus].classList.add("autocomplete-active");
+  }
+  function removeActive(x) {
+    for (var i = 0; i < x.length; i++) {
+      x[i].classList.remove("autocomplete-active");
+    }
+  }
+  function closeAllLists(elmnt) {
+
+    var x = document.getElementsByClassName("autocomplete-items");
+    for (var i = 0; i < x.length; i++) {
+      if (elmnt != x[i] && elmnt != inp) {
+        x[i].parentNode.removeChild(x[i]);
+      }
+    }
+  }
+
+  document.addEventListener("click", function (e) {
+      closeAllLists(e.target);
+  });
+}
+
+var autoAnswers = ["T-Shirt", "Moon Shoes", "Coat Hanger", "Smiler"];
+
+autocomplete(document.getElementById("myInput"), autoAnswers);
+
+window.onscroll = function() {hidefunction()};
+
+function hidefunction()  {
+  if (document.body.scrollTop > 120 || document.documentElement.scrollTop > 120)
+    document.getElementById("topBtn").style.display="block";
+  else {
+    document.getElementById("topBtn").style.display="none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+  </script>
