@@ -6,23 +6,23 @@
   </head>
   
 <body> 
-      <nav> 
-      <li><a href="index.html"> HOME </a> </li>
-      <li><a href="noun.html"> NOUN PROJECT </a> </li>
-      <li> <a href="convince/alien.html"> CONVINCE PROJECT </a> </li>
-        <li> <a href="food/bev.html"> FOOD PROJECT </a> </li>
-        <li> <a href="event/jump.html"> EVENT PROJECT </a> </li>
-        <li> <a href="final-band/curdled.html"> BAND FINAL </a> </li>
-        <li> <a href="band/index.html"> BAND PROJECT </a> </li>
-        <li> <a href="amuse/main.html"> THEME PARK PROJECT </a> </li>
-        <li> <a href="brand/sputnik.html"> BRAND PROJECT </a> </li>
-    </nav>
   <br>
   <br>
   <br>
   <center>
   <h1><b>Leo O'Connor's Website</b></h1>
     <img src="Leo O'C - Personal Artifact.jpg">   
+        <div class="parent">
+      <div> <a href="noun.html"> NOUN </a> </div>
+      <div> <a href="convince/alien.html"> CONVINCE </a> </div>
+      <div> <a href="food/bev.html"> FOOD </a> </div>
+      <div> <a href="event/jump.html"> EVENT </a> </div>
+      <div> <a href="final-band/curdled.html"> ON-DEMAND </a> </div>
+      <div> <a href="band/index.html"> BAND </a> </div>
+      <div> <a href="amuse/main.html"> THEME PARK </a> </div>
+      <div> <a href="brand/sputnik.html"> BRAND </a> </div>
+      <div> <a href="updated/index.html"> REVAMP </a> </div>
+    </div>
   </center>
   </body>
   
@@ -62,9 +62,25 @@ li{
   padding:15px;
   
 }
-a {text-decoration:none;
-  color:#C2D888;
-}
 
-a:hover {background-color:black;}
+a {
+  font-family:Arial, Helvetica;
+  color:black;
+  font-variant: small-caps;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 5px black;
+  font-size:30pt;
+}
+.parent {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: repeat(3, 1fr);
+grid-column-gap: 5px;
+grid-row-gap: 5px;
+
+}
+div{  background-color:#FFF6A9;
+  border:outset }
+
+a:hover {background-color:yellow;}
 </style>
